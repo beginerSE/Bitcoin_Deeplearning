@@ -32,8 +32,7 @@ def get_bitcoinprice():
     r = requests.get(url)
     r = json.loads(r.text)
     bitcoin = r['prices']
-    data = []
-    date = []
+    data, date = [], []
     for i in bitcoin:
         data.append(i[1])
         date.append(i[0])
